@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furever - Adopt</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleDogDetails(dogId) {
+            var details = document.getElementById('details-' + dogId);
+            var learnMoreBtn = document.getElementById('learn-more-' + dogId);
+            if (details.style.display === "none") {
+                details.style.display = "block";
+                learnMoreBtn.innerText = "Show Less";
+            } else {
+                details.style.display = "none";
+                learnMoreBtn.innerText = "Learn More";
+            }
+        }
+
+        function showAdoptForm(dogName, dogPrice) {
+            document.getElementById('adoptForm').style.display = 'block';
+            document.getElementById('dogName').textContent = dogName;
+            document.getElementById('dogPrice').textContent = dogPrice;
+        }
+
+        function hideAdoptForm() {
+            document.getElementById('adoptForm').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Fureverhomes</h1>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="adopt">
+        <h2>Adopt a Dog</h2>
+        <p>Find your perfect furry friend. Check out the dogs available for adoption below:</p>
+        
+        <div class="dog-grid">
+            <!-- Dog 1 -->
+            <div class="dog-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv4jZD06Ay6uzn1ZVhKXlc_k5xaNUpTwvgdA&s" alt="Max">
+                <h3>Max</h3>
+                <button id="learn-more-1" onclick="toggleDogDetails(1)">Learn More</button>
+                <div id="details-1" style="display:none;">
+                    <p>Age: 2 years</p>
+                    <p>Breed: Indie</p>
+                    <p> Max's rescue story</p>
+                    <p>Max was found wandering the streets, alone and scared. He was rescued by a kind-hearted team and brought to a safe shelter. Despite his tough start in life, Max is a loving and loyal companion who deserves a second chance at happiness.
+                    </p>
+                    <p>Adopt Max Today!</p>
+
+                        <p>Max is looking for a forever home where he can receive love, care, and attention. He promises to bring joy, loyalty, and endless snuggles to his new family. Will you give Max a second chance at happiness? Adopt him today and discover the love and companionship he has to offer!"</p>
+                    <p><strong>Price: ₹1500</strong></p>
+                  <p>Rabies & Canine Parvovirus, vaccinations are done</p>
+                    <button onclick="showAdoptForm('Max', '$200')">Adopt Max</button>
+                </div>
+            </div>
+
+            <!-- Dog 2 -->
+            <div class="dog-card">
+                <img src="https://www.globalgiving.org/pfil/41127/ph_41127_157376.jpg" alt="Luna" style="width: 150px; height:auto;">
+                <h3>Luna</h3>
+                <button id="learn-more-2" onclick="toggleDogDetails(2)">Learn More</button>
+                <div id="details-2" style="display:none;">
+                    <p>Age: 3 years</p>
+                    <p>Breed: Indie</p>
+                    <p>"Luna's Rescue Story</p>
+
+                        <p>   Luna was found hiding in an abandoned alleyway, her sparkling eyes dimmed by fear and uncertainty. Rescuers coaxed her out with gentle words and warm treats, and she was whisked away to a safe shelter. Despite her rough start, Luna's celestial spirit shines bright, and she's ready to illuminate the life of her forever family.
+                    </p>
+                        <p>Adopt Luna Today!</p>
+                        
+                        <p>  Luna is a gentle soul searching for a loving home where she can snuggle up close and receive endless affection. She promises to bring a touch of magic and wonder to her new family's life. Will you give Luna a forever home where she can shine bright? Adopt her today and discover the love and companionship she has to offer!"</p>
+                    
+
+                    <p><strong>Price: ₹2000</strong></p>
+                    <p>Rabies & Canine Parvovirus, vaccinations are done</p>
+                    <button onclick="showAdoptForm('Luna', '$250')">Adopt Luna</button>
+                </div>
+            </div>
+
+            <!-- Dog 3 -->
+            <div class="dog-card">
+                <img src="https://i.natgeofe.com/n/2cf64015-d343-4981-90cd-c528a65812e0/01-stray-dogs-nationalgeographic_1927666.jpg" alt="Charlie">
+                <h3>Charlie</h3>
+                <button id="learn-more-3" onclick="toggleDogDetails(3)">Learn More</button>
+                <div id="details-3" style="display:none;">
+                    <p>Age: 4 years</p>
+                    <p>Breed: Indie</p>
+                    <p>Charlie's Rescue Story</p>
+                        <p> Charlie, a charming and affectionate dog, was found wandering the streets, his big brown eyes searching for a loving home. Rescuers took him in and showered him with love and care. Now, Charlie is ready to snuggle up in his forever home and bring joy to his new family.
+                        </p>
+                        <p>Adopt Charlie Today!</p>
+                        
+                      <p>  Charlie is a loving and loyal companion searching for a family to adore him. He promises to bring laughter, snuggles, and endless affection to his new family's life. Will you give Charlie a forever home where he can be the center of attention and love? Adopt him today and discover the joy and companionship he has to offer!</p>
+                    <p><strong>Price: ₹2800</strong></p>
+                    <p>Rabies & Canine Parvovirus, vaccinations are done</p>
+                    <button onclick="showAdoptForm('Charlie', '$180')">Adopt Charlie</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Modal Overlay -->
+<div id="modalOverlay" onclick="closeForm()"></div>
+
+<!-- Adoption Form Modal -->
+<div id="adoptForm">
+    <h2>Adopt <span id="dogName"></span></h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <div >
+            <input type="submit" value="Submit Adoption Request">
+            </form>
+            <button onclick="hideAdoptForm()">Close</button>
+        </div>
+    </div>
+</form>
+<footer>
+    <p>&copy; 2024 Furever. All rights reserved.</p>
+</footer>
+</body>
+</html>
