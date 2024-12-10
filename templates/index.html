@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <section id="home">
+        <h2>Welcome to Furever</h2>
+        <p>Your one-stop platform for dog adoption and supporting their well-being.</p>
+        <img src="https://c4.wallpaperflare.com/wallpaper/682/573/254/dog-dog-breed-dog-breed-group-dogs-wallpaper-preview.jpg" alt="Dogs" style="width: 850px; height:auto;">
+    </section>
+
+    <div id="search-section">
+        <h1>Search for a Dog Breed</h1>
+        <input
+          type="text"
+          id="breed-search"
+          placeholder="Enter breed (e.g., Labrador)"
+        />
+        <button onclick="searchbread()">Search</button>
+      </div>
+    
+     
+    <section id="adopt">
+        <div class="container">
+          <h2>Meet Our Dogs</h2>
+          <div class="dog-grid">
+            <!-- Dog 1 -->
+            <div class="dog-card">
+              <img src="https://i.natgeofe.com/n/2cf64015-d343-4981-90cd-c528a65812e0/01-stray-dogs-nationalgeographic_1927666.jpg" alt="Dog 1">
+              <h3>Charlie</h3>
+              <a href="adopt.html" class="learn-more-btn">Learn More</a>
+            </div>
+            <!-- Dog 2 -->
+            <div class="dog-card">
+              <img src="https://www.globalgiving.org/pfil/41127/ph_41127_157376.jpg" alt="Dog 2"style="width: 150px; height:auto;">
+              <h3>Luna</h3>
+              <a href="adopt.html" class="learn-more-btn">Learn More</a>
+            </div>
+            <!-- Dog 3 -->
+            <div class="dog-card">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv4jZD06Ay6uzn1ZVhKXlc_k5xaNUpTwvgdA&s" alt="Dog 3">
+              <h3>Max</h3>
+              <a href="adopt.html" class="learn-more-btn">Learn More</a>
+            </div>
+            <!-- Add more dogs as needed -->
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="donate-section">
+       
+    <h2>Be a part of our mission</h2>
+        <p>Your contributions help us provide food, shelter, and medical care to the dogs in need. With your support, we can save more lives and help dogs find their forever homes.</p>
+        <p>Your donation can be a lifeline for animals in need. By giving, you'll help provide food, shelter, medical care, and love to rescued animals. Every contribution, big or small, brings them one step closer to a forever home and a second chance at happiness.</p>
+        <div class="donate-buttons">
+          
+          <button onclick="window.location.href='donate.html'">Contribute</button>
+        </div>
+      </section>
+
+    
+
+    <section id="feedback">
+        <h2>Share Your Feedback</h2>
+        <form id="feedback-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+      
+          <label for="feedback">Feedback:</label>
+          <textarea id="feedback" name="feedback" required></textarea>
+      
+          <button type="submit">Submit Feedback</button>
+        </form>
+      </section>
+
+      <section class="reach-out-section">
+        <!-- Dog Picture -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsVfsfmZnSoDorjmsWfvzyZR0GIaZoY0gHpw&s" alt="Dog Image"style="width: 400px; height:auto;">>
+    
+        <!-- Text Section -->
+        <div class="text">
+          <h2>Reach Out to Us!</h2>
+          <p>If you have any questions, concerns, or simply want to know more about our dogs, feel free to reach out. We are always happy to assist you in any way we can!</p>
+          <a href="contact.html" class="reach-out-button">Contact Us</a>
+        </div>
+      </section>
+    
+
+{% endblock %}
